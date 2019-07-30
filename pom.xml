@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.yanmouxie</groupId>
+	<artifactId>aws-kms-example</artifactId>
+	<version>0.0.1.SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+<!-- 	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+	</parent> -->
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>software.amazon.awssdk</groupId>
+				<artifactId>bom</artifactId>
+				<version>2.7.13</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+<!-- 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency> -->
+		
+		<!-- For AWS SDK V1.11 -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-kms</artifactId>
+			<version>[1.11.593,)</version>
+		</dependency>
+		
+		<!-- For AWS Encryption SDK -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-encryption-sdk-java</artifactId>
+			<version>[1.6.0,)</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>[2.10.3,)</version>
+		</dependency>
+		
+		<!-- For AWS SDK V2.0 -->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>kms</artifactId>
+		</dependency>
+		<dependency>
+			<artifactId>auth</artifactId>
+			<groupId>software.amazon.awssdk</groupId>
+		</dependency>
+		<dependency>
+			<artifactId>aws-core</artifactId>
+			<groupId>software.amazon.awssdk</groupId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		
+	</dependencies>
+
+<!-- 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build> -->
+
+
+</project>

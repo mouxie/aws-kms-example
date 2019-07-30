@@ -1,0 +1,7 @@
+#server:
+#    port: 8080
+#logging:
+#    level:
+#        org.springframework.security: INFO
+#    file:
+#        ${jboss.server.log.dir}/oauth2.log
